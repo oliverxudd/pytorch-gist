@@ -4,7 +4,9 @@ import numpy as np
 from PIL import Image
 
 img = np.array(Image.open('test.jpg'))
-plt.figure()
+
+# 控制画幅的大小
+plt.figure(figsize=(20,10))
 
 # 不显示坐标轴
 plt.axis('off')
