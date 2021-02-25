@@ -14,3 +14,7 @@ out = np.where(A<3, A, 0) # 将矩阵A中小于3的元素置为0
 # 4. show nonzero elements of numpy array
 A = np.random.randint(0, 100, (10, 10))
 (coords0, coords1) = numpy.nonzero(A)
+
+# 5. unique elements of an array.
+A = np.array([[0,0], [0,0], [1, 0]])
+np.unique(A, axis=0) # output: array([[0, 0],[1, 0]])
