@@ -12,3 +12,6 @@ A = cv2.normalize(A, dst=None, alpha=1, beta=0, norm_type=cv2.NORM_L2)
 A = np.array([10, 11, 15, 20])
 A = cv2.normalize(A, dst=None, alpha=0, beta=10, norm_type=cv2.NORM_MINMAX)
 #                              min      max                    scale & shift the array.
+
+# 3. convert Color 
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
