@@ -18,3 +18,9 @@ A = np.random.randint(0, 100, (10, 10))
 # 5. unique elements of an array.
 A = np.array([[0,0], [0,0], [1, 0]])
 np.unique(A, axis=0) # output: array([[0, 0],[1, 0]])
+
+# 6. common mistake. read image as uint8 and +- operation with it.
+x = np.array([-1]).astype('uint8')
+print(x) 
+# out: np.array([255], dtype=np.uint8)
+# Convert to float before arithmetic operation with unsigned data.
