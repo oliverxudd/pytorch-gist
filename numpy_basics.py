@@ -25,8 +25,13 @@ print(x)
 # out: np.array([255], dtype=np.uint8)
 # Convert to float before arithmetic operation with unsigned data.
 
-# 7. 从numpy数组中取值. / take elements from an array along an axis.
+# 7. 从numpy数组中按照索引取值. / take elements from an array along an axis.
 # np.take(a, indices, axis=None)
 a = [4, 3, 5, 7, 6, 8]
 np.take(a, [[0, 1], [2, 3]])
 # out: [[4, 3], [5, 7]]  # output.shape=indices.shape       
+
+# 8. 给numpy数组增加长度为1的维度 / 去除numpy数组中长度为1的维度
+y = numpy.expand_dims(x, axis=0)
+
+y = numpy.squeeze(x)
