@@ -35,3 +35,8 @@ np.take(a, [[0, 1], [2, 3]])
 y = numpy.expand_dims(x, axis=0)
 
 y = numpy.squeeze(x)
+
+# 9. 复制：沿着某个轴对numpy数组做复制
+x = np.array([[1,2],[3,4]])
+x = np.repeat(x, 3, axis=1)
+# [[1, 1, 1, 2, 2, 2], [3, 3, 3, 4, 4, 4]]
