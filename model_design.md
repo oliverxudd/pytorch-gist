@@ -1,5 +1,11 @@
 # PyTorch模型设计常见做法
 
+### 特征学习
+
+1. CAB + global residual   
+CAB := channel attention block  
+实例：(1) [MPRNet](https://github.com/swz30/MPRNet)，结构为 global residual(8个CAB + 1个Conv)
+
 ### 输出层
  
 1. 采用1x1卷积  
