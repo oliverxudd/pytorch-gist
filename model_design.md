@@ -20,3 +20,6 @@ CAB := channel attention block
 
 2. 转置卷积+2个卷积层  
 实例：（1）[UNet](https://github.com/milesial/Pytorch-UNet/tree/master/unet)
+
+3. 四个分支：（conv3x3、conv2x3、conv3x2、conv2x2）+ 交错拼接  
+实例：(1)[FCRN](https://github.com/iro-cp/FCRN-DepthPrediction), [论文Fig2, Fig3](https://arxiv.org/pdf/1606.00373.pdf)
