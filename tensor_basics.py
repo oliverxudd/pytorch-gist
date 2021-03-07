@@ -6,7 +6,7 @@ print(x.size()) # 2,3
 y = torch.cat((x,x,x), dim=0)
 print(y.size()) # 6,3
 
-# 2. 已知濾波器的核，將它寫成卷積層
+# 2. 已知滤波器的核，将它写成卷积层
 # 例子，Sobel算子
 import torch
 import torch.nn as nn
