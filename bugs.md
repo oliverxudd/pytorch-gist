@@ -9,3 +9,7 @@
 * 原因 （1）numpy array的strides定义为“沿着特定轴，访问下一个位置的元素，需要在内存中移动多少个Byte”  .  
       (2) 并不是所有的numpy array都可以直接转换为Tenso。根据报错信息，具有负stride的就不行。    
       (3) 一些操作会导致stride变为负数，比如np.flip(A, axis=1) 会将第2个维度的stride变为-1*stride.  
+
+### 2. os.environ["CUDA_VISIBLE_DEVICES"] not working  
+* 解决 把这一行放到"import torch"的前面。事实上，放到最开始。  
+* 原因 同上。参考[solution](https://github.com/pytorch/pytorch/issues/9158)
