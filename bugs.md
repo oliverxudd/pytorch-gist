@@ -11,5 +11,11 @@
       (3) 一些操作会导致stride变为负数，比如np.flip(A, axis=1) 会将第2个维度的stride变为-1*stride.  
 
 ### 2. os.environ["CUDA_VISIBLE_DEVICES"] not working  
+
 * 解决 把这一行放到"import torch"的前面。事实上，放到最开始。  
 * 原因 同上。参考[solution](https://github.com/pytorch/pytorch/issues/9158)
+
+### 3. RTX 3090 capability
+
+* 报错 GeForce RTX 3090 with CUDA capability sm_86 is not compatible with the current PyTorch installation. please check the instructions at https://pytorch.org/get-started/locally/
+* 解决 升级PyTorch到1.8.0 with cu111
