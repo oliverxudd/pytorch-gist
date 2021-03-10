@@ -33,6 +33,8 @@ np.take(a, [[0, 1], [2, 3]])
 
 # 8. 给numpy数组增加长度为1的维度 / 去除numpy数组中长度为1的维度
 y = numpy.expand_dims(x, axis=0)
+# or
+y = x[np.newaxis, ...]
 
 y = numpy.squeeze(x)
 
