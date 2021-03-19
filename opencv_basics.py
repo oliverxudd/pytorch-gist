@@ -34,3 +34,7 @@ im_c = cv2.morphologyEx(im, cv2_MORPH_CLOSE, ele, iteratioin=3)
 absdiff_img = cv2.absdiff(dilate_img,erode_img)
 retval, threshold_img = cv2.threshold(absdiff_img, 40, 255, cv2.THRESH_BINARY)
 edgemap = cv2.bitwise_not(threshold_img)
+
+# 5. 图像尺寸放缩
+## 特别注意，目标尺寸为(新宽，新高)，先x后y
+scaled = cv2.resize(src, (2*W, 2*H), interpolation=cv2.INTER_LINEAR)
