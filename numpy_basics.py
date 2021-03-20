@@ -42,3 +42,6 @@ y = numpy.squeeze(x)
 x = np.array([[1,2],[3,4]])
 x = np.repeat(x, 3, axis=1)
 # [[1, 1, 1, 2, 2, 2], [3, 3, 3, 4, 4, 4]]
+
+# 10. concat: 沿着某个新的轴对数组做cat
+A = np.stack(arrays, axis=0)
