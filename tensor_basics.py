@@ -33,6 +33,9 @@ class Sobel(nn.Module):
         return out
 
 # 3. interpolate函数， align_corners=False, mode='bilinear'
+
+from torch.nn.functional import interpolate
+M = interpolate(I, scale_factor=4, mode='bilinear', align_corners=False)
 """ 
     假定输入为I, 输出为M
     当上采样比例为奇数时，这里以3为例子。interpolate通过两步来做上采样。
