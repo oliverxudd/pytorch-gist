@@ -17,3 +17,6 @@ plt.imshow(img, cmap='gray')
 # 显示标题
 plt.title("test image")
 plt.show()
+
+# 画一条垂直的竖线
+plt.axvline(x=3.2, color='g')
