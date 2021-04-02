@@ -50,3 +50,11 @@ M = interpolate(I, scale_factor=4, mode='bilinear', align_corners=False)
         1. 将I(y, x)映射到I(4*y-1.5, 4*x-1.5)，也就是假设将I中一个点映射为4x4的网格，而且让中心点/虚拟中心点一一对应。
         2. 在4个相邻的中心点之间，做双线性插值。比如这4个点：(2.5, 2.5), (2.5, 6.5), (6.5, 2.5), (6.5, 6.5)。这里以1为起始坐标。
 """
+
+
+# 4. 向量添加维度、压缩维度
+
+x = torch.randn(2,3) # shape=(2,3)
+x.unsqueeze(-1).shape # shape=(2,3,1)
+x.unsqueeze(0).shape # shape=(1,2,3)
+
