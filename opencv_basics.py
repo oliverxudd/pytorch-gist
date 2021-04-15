@@ -38,3 +38,7 @@ edgemap = cv2.bitwise_not(threshold_img)
 # 5. 图像尺寸放缩
 ## 特别注意，目标尺寸为(新宽，新高)，先x后y
 scaled = cv2.resize(src, (2*W, 2*H), interpolation=cv2.INTER_LINEAR)
+
+# 6. 窗口滤波
+kernel = np.ones((5,5),np.float32) / 25
+dst = cv2.filter2D(img, -1, kernel) #(src, ddepth, kernel)
