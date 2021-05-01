@@ -11,9 +11,18 @@
 
 ### 3. 命令行无法打开tensorboard
 * 问题 在conda激活的环境下，命令行无法找到命令`tensorboard`
-* 原因  先前的命令将`tensorboard`从当前python的bin目录中删除了("anaconda3/env/py3/bin/tensorboard"或者".conda/envs/py3/bin/tensorboard")。\
-* 解决  pip先删除再安装tensorboard. 
+* 原因 先前的命令将`tensorboard`从当前python的bin目录中删除了("anaconda3/env/py3/bin/tensorboard"或者".conda/envs/py3/bin/tensorboard")。\
+* 解决 pip先删除再安装tensorboard. 
 ```bash
 pip uinstall tensorboard
 pip install tensorboard
+```
+
+### 4. 如何在Jupyter Notebook中使用argparse
+* 问题 一般的训练脚本中包含的argparse部分代码如果直接放到Jupyter Notebook中，会无法运行。
+* 原因 因为notebook的命令行输入不是argparse模块需要的。
+* 解决 手动为argparse提供参数。
+```python
+train_cmd = "--maxdisp 256 --database /home/data/xudd/optical_flow --logname chairs-0 --savemodel ./logs-chairs-0 --epochs 1000"
+args = parser.parse_args(train_cmd.split())
 ```
